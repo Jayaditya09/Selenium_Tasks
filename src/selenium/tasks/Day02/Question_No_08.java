@@ -13,7 +13,7 @@ public class Question_No_08 {
 		
 		WebDriver driver = new ChromeDriver();
 		
-		driver.get("https://www.instagram.com/");
+		driver.get("https://www.instagram.com/accounts/login/?hl=en");
 		
 		driver.manage().window().maximize();
 		
