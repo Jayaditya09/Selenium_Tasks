@@ -1,5 +1,7 @@
 package selenium.tasks.Day02;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,11 +18,19 @@ System.setProperty("webdriver.chrome.driver","C:\\Users\\Jayaditya\\eclipse-work
 		
 		driver.manage().window().maximize();
 		
+		List<WebElement> framesize = driver.findElements(By.tagName("frame"));
+		
+		System.out.println(framesize.size());
+		
+		driver.switchTo().frame(0);
+		
 		WebElement txtuserid = driver.findElement(By.xpath("//input[@name='fldLoginUserId']"));
 		
 		txtuserid.sendKeys("aditya");
 		
-		//driver.quit();
+		
+		System.out.println(txtuserid.getAttribute("value"));
+		driver.quit();
 	}
 
 }

@@ -1,6 +1,7 @@
 package selenium.tasks.Day02;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -12,9 +13,11 @@ public class Question_No_08 {
 		
 		WebDriver driver = new ChromeDriver();
 		
-		driver.get("https://www.instagram.com/accounts/login/?hl=en) login page");
+		driver.get("https://www.instagram.com/");
 		
 		driver.manage().window().maximize();
+		
+		JavascriptExecutor js = (JavascriptExecutor) driver;
 		
 //		WebElement txtusername = driver.findElement(By.name("username"));
 //		
@@ -26,7 +29,9 @@ public class Question_No_08 {
 		
 		WebElement txtusername = driver.findElement(By.xpath("//input[@name='username']"));
 		
-		txtusername.sendKeys("8008316863");
+		js.executeScript("arguments[0].setAtrribute('8008316863')", txtusername);
+		
+//		txtusername.sendKeys("8008316863");
 		
 		WebElement txtpassword = driver.findElement(By.xpath("//input[@name='password']"));
 		

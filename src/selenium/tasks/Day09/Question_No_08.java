@@ -10,15 +10,16 @@ import org.openqa.selenium.support.ui.Select;
 public class Question_No_08 {
 
 	public static void main(String[] args) throws InterruptedException {
-		System.setProperty("webdriver.chrome.driver","C:\\Users\\Jayaditya\\eclipse-workspace\\Selenium Tasks\\drivers\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver",
+				"C:\\Users\\Jayaditya\\eclipse-workspace\\Selenium Tasks\\drivers\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://adactinhotelapp.com/");
-		//driver.manage().window().maximize();
+		// driver.manage().window().maximize();
 		WebElement txtusr = driver.findElement(By.id("username"));
 		txtusr.sendKeys("9384873332");
 
 		WebElement txtpwd = driver.findElement(By.id("password"));
-		txtpwd.sendKeys("9384873332",Keys.ENTER);
+		txtpwd.sendKeys("9384873332", Keys.ENTER);
 
 		WebElement loc = driver.findElement(By.id("location"));
 
@@ -64,34 +65,31 @@ public class Question_No_08 {
 
 		WebElement search = driver.findElement(By.id("Submit"));
 		search.click();
-		
+
 		WebElement rdbtn = driver.findElement(By.id("radiobutton_0"));
-		
+
 		rdbtn.click();
-		
+
 		WebElement btncon = driver.findElement(By.id("continue"));
 		btncon.click();
-		
+
 		WebElement txtfn = driver.findElement(By.id("first_name"));
 		txtfn.sendKeys("Aditya");
-		
+
 		WebElement txtln = driver.findElement(By.id("last_name"));
 		txtln.sendKeys("Boyina");
-		
+
 		WebElement txtbad = driver.findElement(By.id("address"));
 		txtbad.sendKeys("Chennai");
-		
+
 		WebElement cc = driver.findElement(By.id("cc_num"));
 		cc.sendKeys("1234567891234567");
-		
-		
-		
+
 		WebElement cctype = driver.findElement(By.id("cc_type"));
 
 		Select type = new Select(cctype);
 
 		type.selectByVisibleText("VISA");
-
 
 		WebElement ccmon = driver.findElement(By.id("cc_exp_month"));
 
@@ -107,16 +105,16 @@ public class Question_No_08 {
 
 		WebElement cvv = driver.findElement(By.id("cc_cvv"));
 		cvv.sendKeys("123");
-		
+
 		WebElement btnbook = driver.findElement(By.id("book_now"));
 		btnbook.click();
-		
+
 		Thread.sleep(10000);
 		WebElement btnbookno = driver.findElement(By.id("order_no"));
 		String bookingid = btnbookno.getAttribute("value");
-		
+
 		System.out.println(bookingid);
-		
+
 		driver.close();
 	}
 

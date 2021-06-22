@@ -23,7 +23,7 @@ public class Question_No_10 {
 		WebElement txtpassword = driver.findElement(By.id("password"));
 		
 		txtpassword.sendKeys("confidential");
-		
+		System.out.println(txtpassword.getAttribute("value"));
 		driver.quit();
 	}
 
