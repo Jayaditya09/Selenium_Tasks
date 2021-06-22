@@ -1,5 +1,7 @@
 package selenium.tasks.Day02;
 
+import java.sql.Time;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -15,7 +17,11 @@ public class Question_No_08 {
 		
 		driver.get("https://www.instagram.com/accounts/login/?hl=en");
 		
+		
+		
 		driver.manage().window().maximize();
+		
+		driver.manage().timeouts().implicitlyWait(2000, null);
 		
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		
