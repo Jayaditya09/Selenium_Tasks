@@ -19,7 +19,7 @@ public class Question_No_08 {
 		
 		
 		
-		driver.manage().window().maximize();
+		
 		
 		driver.manage().timeouts().implicitlyWait(2000, null);
 		
