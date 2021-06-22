@@ -21,7 +21,7 @@ public class Question_No_08 {
 		
 		
 		
-		driver.manage().timeouts().implicitlyWait(2000, null);
+		driver.manage().timeouts().implicitlyWait(3000, null);
 		
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		
