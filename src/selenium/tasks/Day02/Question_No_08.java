@@ -15,7 +15,7 @@ public class Question_No_08 {
 		
 		driver.get("https://www.instagram.com/");
 		
-		driver.manage().window().maximize();
+		
 		
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		
